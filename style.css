@@ -12,6 +12,7 @@
     --cor-preta-mais-transaparente: rgba(0, 0, 0, 0.4);
     --cor-branca: rgba(255, 255, 255);
     --cor-cinza: rgb(200, 200, 200);
+    --cor-azul: rgba(40,120,255);
 }
 
 html{
@@ -46,27 +47,27 @@ body{
     height: 11vh;
     background: var(--cor-preta);
 
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .cabecalho-logo{
-    left: 20px;
     width: 150px;
     height: 70px;
 
-    position: absolute;
+    position: absolute;    
+    left: 20px;
 }
 
 .cabecalho-menu{
-    right: 30px;
-    gap: 25px;
-    
     display: flex;
     position: absolute;
+    right: 30px;
+    gap: 25px;
 }
 
 .cabecalho-menu-item{   
@@ -81,6 +82,7 @@ body{
 }
 
 .cabecalho-menu-item:hover{
+    color: var(--cor-azul);
 }
 
 /*---------- Conteúdo principal ----------*/
@@ -89,7 +91,7 @@ body{
 
 #conteudo-principal{
     width: 100%;
-    height: 77vh;
+    height: 85vh;
     
     display: flex;
     flex-direction: row;
@@ -102,56 +104,57 @@ body{
 }
 
 .conteudo-principal-apresentacao-um{
-    height: 77vh;
+    height: 85vh;
     width: 50%;
-
+    
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 .conteudo-principal-apresentacao-um-texto{
-    gap: 20px;
-    top: 100px;
-    left: 20px;
-   
     position: absolute;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    top: 180px;
+    gap: 5px;
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    font-size: 25px;
-    line-height: 18px;
-    color: var(--cor-branca);
 }
 
 .conteudo-principal-apresentacao-um-texto-nome{
+    color: var(--cor-branca);
+
+    font-size: 35px;
 }
 
 .conteudo-principal-apresentacao-um-texto-ocupacao{
-    font-size: 20px;
+    color: var(--cor-azul);
+
+    font-size: 25px;
 }
 
 .conteudo-principal-apresentacao-um-logos{
-    bottom: 20px;
-    left: 20px;
-
     position: absolute;
+    bottom: 40px;
     display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    column-gap: 10px;
+    flex-direction: row;
+    align-content: flex-start;
+    row-gap: 15px;
+    column-gap: 20px;
 }
 
 .conteudo-principal-apresentacao-um-logos-botao{
-    height: 40px;
     width: 40px;
-    border-radius: 20%;
-    border: none;  
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
     
     position: relative;
     display: flex;
@@ -169,32 +172,29 @@ body{
 }
 
 .conteudo-principal-apresentacao-um-logos-botao-logo{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     color: var(--cor-branca);
 }
 
 .conteudo-principal-apresentacao-um-logos-botao:hover{
     transform: scale(1.05);
-    background-color: var(--cor-cinza);
+    background-color: var(--cor-azul);
 }
 
 /*---------- Conteúdo principal parte 2----------*/
 
 .conteudo-principal-apresentacao-dois{
-    height: 77vh;
+    height: 85vh;
     width: 50%;
-    border-radius: 10px;
-    background: transparent;
+    background: var(--cor-preta-menos-transaparente);
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: -5px 0px 10px var(--cor-preta-mais-transaparente);
+    backdrop-filter: blur(6px);
 }
 
 .conteudo-principal-apresentacao-dois-retrato{
@@ -202,11 +202,14 @@ body{
     width: 190px;
     border-radius: 50%;
     border: 1px solid var(--cor-branca);
+
+    margin-top: 50px;
 }
 
 .conteudo-principal-apresentacao-dois-titulo{
     padding: 5px;
-    color: var(--cor-branca);
+    margin-top: 20px;
+    color: var(--cor-azul);
 
     font-family: 'Poppins';
     font-style: normal;
@@ -219,28 +222,30 @@ body{
 
     display: flex;
     text-align: justify;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 
     font-family: 'Poppins'; 
     font-style: normal;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 13px;
+}
+
+.conteudo-principal-apresentacao-um-texto, .conteudo-principal-apresentacao-um-logos, .conteudo-principal-apresentacao-dois-retrato, .conteudo-principal-apresentacao-dois-titulo, .conteudo-principal-apresentacao-dois-texto {
+    visibility: hidden;
 }
 
 /*---------- Conteúdo secundário ----------*/
 
 #conteudo-secundario{
-    height: 60vh;
+    height: 100vh;
     width: 100%;
-    background: linear-gradient(180deg, #000034 28.49%, rgba(9, 243, 243, 0.836) 526.89%);
+    background-image: url("/imagens/background2.jpg");
 }
 
 .conteudo-secundario-titulo{
     padding: 10px;
-    color: var(--cor-branca);
-    border-top: 0.5px solid var(--cor-branca);
-    border-bottom: 0.5px solid var(--cor-branca);
+    color: var(--cor-preta);
 
     display: flex;
     justify-content: center;
@@ -281,7 +286,7 @@ body{
     }
 
     #conteudo-principal{
-        height: 190vh;
+        height: 210vh;
 
         display: flex;
         flex-direction: column;
@@ -289,7 +294,7 @@ body{
 
     .conteudo-principal-apresentacao-um {
         width: 100%;
-        height: 90vh;
+        height: 100vh;
     }
 
     .conteudo-principal-apresentacao-um-texto {
@@ -301,13 +306,13 @@ body{
     }
 
     .conteudo-principal-apresentacao-um-logos-botao-logo {
-        width: 26px;
-        height: 26px;
+        width: 40px;
+        height: 40px;
     }
 
     .conteudo-principal-apresentacao-dois {
         width: 100%;
-        height: 100vh;
+        height: 110vh;
     }
     
     

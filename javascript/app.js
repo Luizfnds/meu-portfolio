@@ -8,6 +8,6 @@ sr.reveal(".conteudo-principal-apresentacao-um-logos", { duration: 1000 });
 sr.reveal(".conteudo-principal-apresentacao-dois-retrato", { duration: 1000 });
 sr.reveal(".conteudo-principal-apresentacao-dois-titulo", { duration: 1000 });
 sr.reveal(".conteudo-principal-apresentacao-dois-texto", { duration: 1000 });
-sr.reveal(".conteudo-secundario-projetos-um", { duration: 1000 });
+sr.reveal(".conteudo-secundario-projetos", { duration: 1000 });
 sr.reveal(".imagem-teste", { duration: 1000 });
 

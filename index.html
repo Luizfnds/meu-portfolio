@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Portfólio</title>
 </head>
 <body>
@@ -42,16 +44,48 @@
             </div>
         </section>    
         <section id="conteudo-secundario">
-            <div class="conteudo-secundario">
-                <h3 class="conteudo-secundario-titulo">PROJETOS</h3>
-                <div class="conteudo-secundario-projetos">
-                    <img class="imagem-teste" src="imagens/imagem-teste.png"></img>
-                    <div class="conteudo-secundario-projetos-um"></div>
+            <div class="swiper mySwiper conteudo-secundario">
+                <div class="conteudo-secundario-titulo">PROJETOS</div>
+                <div class="swiper-wrapper conteudo-secundario-projetos">
+
+                    <div class="swiper-slide conteudo-secundario-projetos-um">
+                            <img class="conteudo-secundario-projetos-um-imagem" src="imagens/imagem-teste.png">
+                            <div class="conteudo-secundario-projetos-um-conteudo">
+                                <div class="conteudo-secundario-projetos-um-conteudo-um">
+                                    <h4 class="conteudo-secundario-projetos-um-conteudo-um-titulo">Descrição</h4>
+                                    <p class="conteudo-secundario-projetos-um-conteudo-um-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    <p></p>
+                                </div>
+                                <div class="conteudo-secundario-projetos-um-conteudo-dois">
+                                    <h4 class="conteudo-secundario-projetos-um-conteudo-dois-titulo">Links</h4>
+                                    <div class="conteudo-secundario-projetos-um-conteudo-dois-botoess">
+                                        <button class="conteudo-secundario-projetos-um-conteudo-dois-botoes">Código fonte</button>
+                                        <button class="conteudo-secundario-projetos-um-conteudo-dois-botoes">Documentação</button>
+                                    </div>
+                                </div>
+                            </div>                        
+                    </div>
+                    <div class="swiper-slide conteudo-secundario-projetos-dois">
+                            <img class="conteudo-secundario-projetos-dois-imagem" src="imagens/imagem-teste1.png">
+                            <div class="conteudo-secundario-projetos-dois-conteudo">
+                                <div class="conteudo-secundario-projetos-dois-conteudo-um">
+                                    <h4 class="conteudo-secundario-projetos-dois-conteudo-um-titulo">Descrição</h4>
+                                </div>
+                                <div class="conteudo-secundario-projetos-dois-conteudo-dois">
+                                    <h4 class="conteudo-secundario-projetos-dois-conteudo-dois-titulo">Links</h4>
+                                    <div class="conteudo-secundario-projetos-dois-conteudo-dois-botoes"></div>
+                                </div>
+                            </div>                        
+                    </div>
+
                 </div>
+                <div class="swiper-button-prev conteudo-secundario-projetos-botao-esquerdo"></div>
+                <div class="swiper-button-next conteudo-secundario-projetos-botao-direito"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
         <section id="conteudo-terciario">
-
+            <div class="conteudo-terciario"></div>
         </section>
     </main>
     
@@ -62,7 +96,30 @@
     </footer>
 
     <script src="/javascript/app.js"></script>
-
     <script src="/javascript/app2.js"></script>
+    <script src="javascript/app3.js"></script>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
+      </body>
+    </html>
+
 </body>
 </html>

@@ -1,50 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --cor-preta: rgba(0, 0, 0);
     --cor-preta-menos-transaparente: rgba(0, 0, 0, 0.7);
     --cor-preta-mais-transaparente: rgba(0, 0, 0, 0.4);
     --cor-branca: rgba(255, 255, 255);
-    --cor-branca-menos-transaparente: rgba(255, 255, 255, 0.7)
-    --cor-cinza: rgb(200, 200, 200);
+    --cor-branca-menos-transaparente: rgba(255, 255, 255, 0.7) --cor-cinza: rgb(200, 200, 200);
     --cor-azul: rgba(100, 100, 255);
-    --cor-azul-menos-transparente: rgba(100, 100 ,255 , 0.4);
+    --cor-azul-menos-transparente: rgba(50, 50, 255, 0.4);
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     overflow: overlay;
 }
 
-/*---------- Scrollbar ----------*/
+/*---------------------------------------- Scrollbar ----------------------------------------*/
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
     background: transparent;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     border-radius: 10px;
     border: 0.5px solid var(--cor-preta);
     background: var(--cor-preta-menos-transaparente);
 }
 
-::-webkit-scrollbar-corner{
+::-webkit-scrollbar-corner {
     border-radius: 10px;
 }
 
-/*---------- Cabeçalho ----------*/
 
-.cabecalho{
+/*---------------------------------------- Conteúdo cabeçalho ----------------------------------------*/
+
+
+.cabecalho {
     width: 100%;
     height: 10vh;
     background: var(--cor-preta);
@@ -57,22 +58,22 @@ body{
     z-index: 1;
 }
 
-.cabecalho-logo{
+.cabecalho-logo {
     width: 150px;
     height: 70px;
 
-    position: absolute;    
+    position: absolute;
     left: 20px;
 }
 
-.cabecalho-menu{
+.cabecalho-menu {
     display: flex;
     position: absolute;
     right: 30px;
     gap: 35px;
 }
 
-.cabecalho-menu-item{   
+.cabecalho-menu-item {
     text-decoration: none;
     font-family: 'Poppins';
     font-style: normal;
@@ -83,18 +84,21 @@ body{
     transition: all 500ms;
 }
 
-.cabecalho-menu-item:hover{
+.cabecalho-menu-item:hover {
     color: var(--cor-azul);
 }
 
-/*---------- Conteúdo principal ----------*/
 
-/*---------- Conteúdo principal parte 1----------*/
+/*---------------------------------------- Conteúdo principal ----------------------------------------*/
 
-#conteudo-principal{
+
+/*---------------------------------------- Conteúdo principal parte 1 ----------------------------------------*/
+
+
+#conteudo-principal {
     width: 100%;
     height: 100vh;
-    
+
     display: flex;
     flex-direction: row;
 
@@ -105,10 +109,10 @@ body{
     background-attachment: fixed;
 }
 
-.conteudo-principal-apresentacao-um{
+.conteudo-principal-apresentacao-um {
     width: 50%;
     height: 100vh;
-    
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -118,7 +122,7 @@ body{
     text-shadow: 0px 6px 6px var(--cor-preta);
 }
 
-.conteudo-principal-apresentacao-um-texto{
+.conteudo-principal-apresentacao-um-texto {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -131,60 +135,62 @@ body{
     font-weight: 300;
 }
 
-.conteudo-principal-apresentacao-um-texto-nome{
+.conteudo-principal-apresentacao-um-texto-nome {
     color: var(--cor-branca);
 
     font-size: 35px;
 }
 
-.conteudo-principal-apresentacao-um-texto-ocupacao{
+.conteudo-principal-apresentacao-um-texto-ocupacao {
     color: var(--cor-azul);
 
     font-size: 25px;
 }
 
-.conteudo-principal-apresentacao-um-logos{
+.conteudo-principal-apresentacao-um-logos {
     position: absolute;
-    bottom: 40px;
+    bottom: 90px;
     display: flex;
     flex-direction: row;
     align-content: center;
     column-gap: 40px;
 }
 
-.fa-linkedin-in{
+.fa-linkedin-in {
     color: var(--cor-branca);
-    font-size: 40px;
+    font-size: 35px;
     transition: all 500ms;
 }
 
-.fa-linkedin-in:hover{
+.fa-linkedin-in:hover {
     color: var(--cor-azul);
 }
 
-.fa-github{
+.fa-github {
     color: var(--cor-branca);
-    font-size: 40px;
+    font-size: 35px;
     transition: all 500ms;
 }
 
-.fa-github:hover{
+.fa-github:hover {
     color: var(--cor-azul);
 }
 
-.fa-file-arrow-down{
+.fa-file-arrow-down {
     color: var(--cor-branca);
-    font-size: 40px;
+    font-size: 35px;
     transition: all 500ms;
 }
 
-.fa-file-arrow-down:hover{
+.fa-file-arrow-down:hover {
     color: var(--cor-azul);
 }
 
-/*---------- Conteúdo principal parte 2----------*/
 
-.conteudo-principal-apresentacao-dois{
+/*---------------------------------------- Conteúdo principal parte 2 ----------------------------------------*/
+
+
+.conteudo-principal-apresentacao-dois {
     width: 50%;
     height: 100vh;
     background: var(--cor-preta-menos-transaparente);
@@ -196,18 +202,20 @@ body{
     justify-content: center;
 }
 
-.conteudo-principal-apresentacao-dois-retrato{
+.conteudo-principal-apresentacao-dois-retrato {
     height: 200px;
     width: 190px;
     border-radius: 50%;
-    border: 1px solid var(--cor-branca);
+    border: 2px solid var(--cor-branca);
+    background-color: var(--cor-azul-menos-transparente);
 
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 30px;
 }
 
-.conteudo-principal-apresentacao-dois-titulo{
+.conteudo-principal-apresentacao-dois-titulo {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: var(--cor-azul);
 
     font-family: 'Poppins';
@@ -217,27 +225,34 @@ body{
     border-bottom: 1px solid var(--cor-branca);
 }
 
-.conteudo-principal-apresentacao-dois-texto{
+.conteudo-principal-apresentacao-dois-texto {
     color: var(--cor-branca);
 
     display: flex;
     text-align: justify;
+    text-indent: 30px;
     margin-left: 15%;
     margin-right: 15%;
 
-    font-family: 'Poppins'; 
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
 }
 
-.conteudo-principal-apresentacao-um-texto, .conteudo-principal-apresentacao-um-logos, .conteudo-principal-apresentacao-dois-retrato, .conteudo-principal-apresentacao-dois-titulo, .conteudo-principal-apresentacao-dois-texto {
+.conteudo-principal-apresentacao-um-texto,
+.conteudo-principal-apresentacao-um-logos,
+.conteudo-principal-apresentacao-dois-retrato,
+.conteudo-principal-apresentacao-dois-titulo,
+.conteudo-principal-apresentacao-dois-texto {
     visibility: hidden;
 }
 
-/*---------- Conteúdo secundário ----------*/
 
-#conteudo-secundario{
+/*---------------------------------------- Conteúdo secundário ----------------------------------------*/
+
+
+#conteudo-secundario {
     width: 100%;
     height: 90vh;
     background-image: url("/imagens/background3.jpg");
@@ -250,7 +265,7 @@ body{
     justify-content: center;
 }
 
-.conteudo-secundario{
+.conteudo-secundario {
     width: 100%;
     height: 100%;
 
@@ -261,35 +276,31 @@ body{
     justify-content: center;
     row-gap: 10px;
     z-index: 0;
-
-    background-color: var(--cor-azul-menos-transparente);
 }
 
-.conteudo-secundario-titulo{
+.conteudo-secundario-titulo {
     border-bottom: 1px solid var(--cor-preta);
     position: absolute;
-    top: 20px;
+    top: 40px;
     margin-bottom: 10px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
-    color: var(--cor-branca);
+    color: var(--cor-azul);
 }
 
-.conteudo-secundario-projetos{
+.conteudo-secundario-projetos {
     width: 80%;
-    height: 80%;
+    height: 75%;
 
     position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.conteudo-secundario-projetos-um, .conteudo-secundario-projetos-dois{
+.conteudo-secundario-projetos-slide {
     width: 80%;
     height: 90%;
     display: flex;
@@ -298,13 +309,14 @@ body{
     transition: all 1s;
 }
 
-.conteudo-secundario-projetos-um-imagem{
-    width: 50%;
+.conteudo-secundario-projetos-slide-imagem {
+    width: 53%;
     height: 100%;
+    border: 1px solid var(--cor-azul);
 }
 
-.conteudo-secundario-projetos-um-conteudo{
-    width: 30%;
+.conteudo-secundario-projetos-slide-conteudo {
+    width: 27%;
     height: 100%;
     background-color: var(--cor-preta-menos-transaparente);
 
@@ -312,75 +324,55 @@ body{
     flex-direction: column;
 }
 
-.conteudo-secundario-projetos-um-conteudo-um{
+.conteudo-secundario-projetos-slide-conteudo-um-titulo,
+.conteudo-secundario-projetos-slide-conteudo-dois-titulo {
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--cor-branca);
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--cor-azul);
+    margin-top: 5px;
+}
+
+.conteudo-secundario-projetos-slide-conteudo-um {
     width: 100%;
     height: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 
-.conteudo-secundario-projetos-um-conteudo-dois{
+.conteudo-secundario-projetos-slide-conteudo-um-texto {
+    padding: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--cor-branca);
+    text-align: justify;
+}
+
+.conteudo-secundario-projetos-slide-conteudo-dois {
     width: 100%;
     height: 30%;
-}
-
-.conteudo-secundario-projetos-um-conteudo-um-titulo, .conteudo-secundario-projetos-um-conteudo-dois-titulo{
-    width: 100%;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    color: var(--cor-branca);
-    text-align: center;
-}
-
-.conteudo-secundario-projetos-dois-conteudo-um-titulo, .conteudo-secundario-projetos-dois-conteudo-dois-titulo{
-    width: 100%;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    color: var(--cor-branca);
-    text-align: center;
-}
-
-.conteudo-secundario-projetos-um-conteudo-dois-titulo{
-}
-
-.swiper-pagination-bullet{
-    position: relative;
-    bottom: 30px;
-    width: 26px;
-    height: 10px;
-    border-radius: 25px;
-    background-color: var(--cor-branca);
-}
-
-.swiper-button-next, .swiper-button-prev{
-    right: 50px;
-    color: var(--cor-branca);
-    transition: all 500ms;
-} 
-
-.swiper-button-prev{
-    left: 50px;
-}
-
-.swiper-button-next:hover, .swiper-button-prev:hover{
-    color: var(--cor-azul);
-}
-
-.conteudo-secundario-projetos-um-conteudo-dois{
+    background-color: var(--cor-preta-mais-transaparente);
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     row-gap: 20px;
 }
 
-.conteudo-secundario-projetos-um-conteudo-dois-botoess{
+.conteudo-secundario-projetos-slide-conteudo-dois-botoess {
     display: flex;
     flex-direction: row;
     justify-content: center;
     column-gap: 10px;
 }
-.conteudo-secundario-projetos-um-conteudo-dois-botoes{
+
+.conteudo-secundario-projetos-slide-conteudo-dois-botoes {
     width: 150px;
     height: 50px;
     font-family: 'Poppins';
@@ -394,44 +386,57 @@ body{
     justify-content: center;
     align-items: center;
     column-gap: 5px;
+    transition: all .5s;
 }
 
-.fa-file{
+.fa-file {
     color: var(--cor-preta);
-    font-size:20px;
+    font-size: 20px;
 }
 
-.fa-code{
+.fa-code {
     color: var(--cor-preta);
-    font-size:20px;
+    font-size: 20px;
 }
 
-.conteudo-secundario-projetos-um-conteudo-um{
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
+.conteudo-secundario-projetos-slide-conteudo-dois-botoes:hover {
+    background-color: var(--cor-azul);
+    border: none;
 }
 
-.conteudo-secundario-projetos-um-conteudo-um-titulo{
-    margin-top: 10px;
+.swiper-pagination-bullet {
+    position: relative;
+    bottom: 50px;
+    width: 26px;
+    height: 10px;
+    border-radius: 25px;
+    background-color: var(--cor-azul);
 }
 
-.conteudo-secundario-projetos-um-conteudo-um-texto{
-    padding: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    color: var(--cor-branca);
-    text-align: justify;
+.swiper-button-next,
+.swiper-button-prev {
+    right: 70px;
+    color: var(--cor-azul);
+    transition: all 500ms;
 }
 
-/*---------- Conteúdo Terciário ----------*/
+.swiper-button-prev {
+    left: 70px;
+}
 
-#conteudo-terciario{
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: var(--cor-azul-menos-transparente);
+}
+
+
+/*---------------------------------------- Conteúdo terciário ----------------------------------------*/
+
+
+#conteudo-terciario {
     width: 100%;
-    height: 85vh;
-    
+    height: 90vh;
+
     display: flex;
     flex-direction: row;
 
@@ -445,7 +450,7 @@ body{
     justify-content: center;
 }
 
-.conteudo-terciario{
+.conteudo-terciario {
     width: 85%;
     height: 500px;
     background-color: rgba(255, 255, 255, 0.7);
@@ -453,9 +458,11 @@ body{
     border-radius: 10px;
 }
 
-/*---------- Rodapé ----------*/
 
-.rodape{
+/*---------------------------------------- Rodapé ----------------------------------------*/
+
+
+.rodape {
     width: 100%;
     background-color: var(--cor-preta);
 
@@ -463,13 +470,15 @@ body{
     justify-content: center;
 }
 
-.rodape-logo{
+.rodape-logo {
     width: 180px;
     height: 90px;
     padding: 5px;
 }
 
-/*---------- Responsividade tablet ----------*/
+
+/*---------------------------------------- Responsividade 768x ----------------------------------------*/
+
 
 @media screen and (max-width: 768px) {
 
@@ -482,7 +491,7 @@ body{
         right: 10px;
     }
 
-    #conteudo-principal{
+    #conteudo-principal {
         height: 210vh;
 
         display: flex;
@@ -511,8 +520,9 @@ body{
         width: 100%;
         height: 110vh;
     }
-    
-    
+
+
 }
 
-/*---------- Responsividade celular ----------*/
+
+/*---------------------------------------- Responsividade celular ----------------------------------------*/

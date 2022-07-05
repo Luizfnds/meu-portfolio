@@ -13,8 +13,8 @@
     --cor-branca: rgba(255, 255, 255);
     --cor-branca-menos-transaparente: rgba(255, 255, 255, 0.7)
     --cor-cinza: rgb(200, 200, 200);
-    --cor-azul: rgba(40, 50, 255);
-    --cor-azul-menos-transparente: rgba(40, 50 ,255 , 0.7);
+    --cor-azul: rgba(100, 100, 255);
+    --cor-azul-menos-transparente: rgba(100, 100 ,255 , 0.4);
 }
 
 html{
@@ -69,7 +69,7 @@ body{
     display: flex;
     position: absolute;
     right: 30px;
-    gap: 25px;
+    gap: 35px;
 }
 
 .cabecalho-menu-item{   
@@ -93,7 +93,7 @@ body{
 
 #conteudo-principal{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     
     display: flex;
     flex-direction: row;
@@ -107,7 +107,7 @@ body{
 
 .conteudo-principal-apresentacao-um{
     width: 50%;
-    height: 90vh;
+    height: 100vh;
     
     position: relative;
     display: flex;
@@ -148,49 +148,45 @@ body{
     bottom: 40px;
     display: flex;
     flex-direction: row;
-    align-content: flex-start;
-    row-gap: 15px;
-    column-gap: 20px;
+    align-content: center;
+    column-gap: 40px;
 }
 
-.conteudo-principal-apresentacao-um-logos-botao{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: transparent;
-    
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 5px;
-
-    Font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-
-    cursor: pointer;
+.fa-linkedin-in{
+    color: var(--cor-branca);
+    font-size: 40px;
     transition: all 500ms;
 }
 
-.conteudo-principal-apresentacao-um-logos-botao-logo{
-    width: 35px;
-    height: 35px;
-    color: var(--cor-branca);
+.fa-linkedin-in:hover{
+    color: var(--cor-azul);
 }
 
-.conteudo-principal-apresentacao-um-logos-botao:hover{
-    transform: scale(1.05);
-    background-color: var(--cor-azul);
+.fa-github{
+    color: var(--cor-branca);
+    font-size: 40px;
+    transition: all 500ms;
+}
+
+.fa-github:hover{
+    color: var(--cor-azul);
+}
+
+.fa-file-arrow-down{
+    color: var(--cor-branca);
+    font-size: 40px;
+    transition: all 500ms;
+}
+
+.fa-file-arrow-down:hover{
+    color: var(--cor-azul);
 }
 
 /*---------- Conteúdo principal parte 2----------*/
 
 .conteudo-principal-apresentacao-dois{
     width: 50%;
-    height: 90vh;
+    height: 100vh;
     background: var(--cor-preta-menos-transaparente);
     backdrop-filter: blur(6px);
 
@@ -210,14 +206,15 @@ body{
 }
 
 .conteudo-principal-apresentacao-dois-titulo{
-    padding: 5px;
     margin-top: 20px;
+    margin-bottom: 10px;
     color: var(--cor-azul);
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
+    border-bottom: 1px solid var(--cor-branca);
 }
 
 .conteudo-principal-apresentacao-dois-texto{
@@ -225,8 +222,8 @@ body{
 
     display: flex;
     text-align: justify;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
 
     font-family: 'Poppins'; 
     font-style: normal;
@@ -242,7 +239,7 @@ body{
 
 #conteudo-secundario{
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     background-image: url("/imagens/background3.jpg");
     background-position: center center;
     background-size: cover;
@@ -254,8 +251,8 @@ body{
 }
 
 .conteudo-secundario{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 
     position: relative;
     display: flex;
@@ -269,8 +266,9 @@ body{
 }
 
 .conteudo-secundario-titulo{
+    border-bottom: 1px solid var(--cor-preta);
     position: absolute;
-    top: 5px;
+    top: 20px;
     margin-bottom: 10px;
     font-family: 'Poppins';
     font-style: normal;
@@ -280,7 +278,7 @@ body{
 }
 
 .conteudo-secundario-projetos{
-    width: 90%;
+    width: 80%;
     height: 80%;
 
     position: absolute;
@@ -289,18 +287,19 @@ body{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .conteudo-secundario-projetos-um, .conteudo-secundario-projetos-dois{
-    width: 90%;
-    height: 100%;
+    width: 80%;
+    height: 90%;
     display: flex;
     flex-direction: row;
+
+    transition: all 1s;
 }
 
 .conteudo-secundario-projetos-um-imagem{
-    width: 60%;
+    width: 50%;
     height: 100%;
 }
 
@@ -347,18 +346,27 @@ body{
 }
 
 .swiper-pagination-bullet{
+    position: relative;
+    bottom: 30px;
     width: 26px;
-    height: 7px;
+    height: 10px;
     border-radius: 25px;
     background-color: var(--cor-branca);
 }
 
 .swiper-button-next, .swiper-button-prev{
-    height: 100%;
-    top: 0;
+    right: 50px;
     color: var(--cor-branca);
+    transition: all 500ms;
 } 
 
+.swiper-button-prev{
+    left: 50px;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    color: var(--cor-azul);
+}
 
 .conteudo-secundario-projetos-um-conteudo-dois{
     display: flex;
@@ -382,12 +390,30 @@ body{
     color: var(--cor-preta);
     text-align: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.fa-file{
+    color: var(--cor-preta);
+    font-size:20px;
+}
+
+.fa-code{
+    color: var(--cor-preta);
+    font-size:20px;
 }
 
 .conteudo-secundario-projetos-um-conteudo-um{
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 5px;
+}
+
+.conteudo-secundario-projetos-um-conteudo-um-titulo{
+    margin-top: 10px;
 }
 
 .conteudo-secundario-projetos-um-conteudo-um-texto{
@@ -395,36 +421,10 @@ body{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--cor-branca);
     text-align: justify;
 }
-
-/*
-.conteudo-secundario-projetos-botao-esquerdo, .conteudo-secundario-projetos-botao-direito{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--cor-preta-menos-transaparente);
-    cursor: pointer;
-}
-
-.conteudo-secundario-projetos-botao-esquerdo{
-    left: 0;
-}
-
-.conteudo-secundario-projetos-botao-direito{
-    right: 0;
-}
-*/
-
-.fa-solid{
-    color: var(--cor-branca);
-    font-size: 30px;
-}
-
 
 /*---------- Conteúdo Terciário ----------*/
 

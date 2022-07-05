@@ -16,8 +16,8 @@
             <img class="cabecalho-logo" src="/imagens/logo-principal.png">
             <nav class="cabecalho-menu">
                 <a class="cabecalho-menu-item" href="#conteudo-principal">INICIO</a>
+                <a class="cabecalho-menu-item" href="#conteudo-secundario">MEUS PROJETOS</a>
                 <a class="cabecalho-menu-item" href="#conteudo-">HABILIDADES</a>
-                <a class="cabecalho-menu-item" href="#conteudo-secundario">PROJETOS</a>
             </nav>
         </div>
     </header>
@@ -30,9 +30,9 @@
                     <div class="conteudo-principal-apresentacao-um-texto-ocupacao">DESENVOLVEDOR WEB FULLSTACK</div>
                 </h1>
                 <div class="conteudo-principal-apresentacao-um-logos">
-                    <a class="conteudo-principal-apresentacao-um-logos-botao" href="https://www.linkedin.com/in/luizfnds/" target="_blank"><img class="conteudo-principal-apresentacao-um-logos-botao-logo" src="/imagens/logo-linkedin.png"></a>
-                    <a class="conteudo-principal-apresentacao-um-logos-botao" href="https://github.com/Luizfnds" target="_blank"><img class="conteudo-principal-apresentacao-um-logos-botao-logo" src="/imagens/logo-github.png"></a>
-                    <a class="conteudo-principal-apresentacao-um-logos-botao" href="downloads/Curriculo-2022.2.pdf" download="Curriculo-2022.pdf" type="application/pdf"><img class="conteudo-principal-apresentacao-um-logos-botao-logo" src="/imagens/logo-download.png"></a>
+                    <a class="conteudo-principal-apresentacao-um-logos-botao" href="https://www.linkedin.com/in/luizfnds/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="conteudo-principal-apresentacao-um-logos-botao" href="https://github.com/Luizfnds" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a class="conteudo-principal-apresentacao-um-logos-botao" href="downloads/Curriculo-2022.2.pdf" download="Curriculo-2022.pdf" type="application/pdf"><i class="fa-solid fa-file-arrow-down"></i></a>
                 </div>
             </div>
             <div class="conteudo-principal-apresentacao-dois">
@@ -45,7 +45,7 @@
         </section>    
         <section id="conteudo-secundario">
             <div class="swiper mySwiper conteudo-secundario">
-                <div class="conteudo-secundario-titulo">PROJETOS</div>
+                <div class="conteudo-secundario-titulo">MEUS PROJETOS</div>
                 <div class="swiper-wrapper conteudo-secundario-projetos">
 
                     <div class="swiper-slide conteudo-secundario-projetos-um">
@@ -59,12 +59,29 @@
                                 <div class="conteudo-secundario-projetos-um-conteudo-dois">
                                     <h4 class="conteudo-secundario-projetos-um-conteudo-dois-titulo">Links</h4>
                                     <div class="conteudo-secundario-projetos-um-conteudo-dois-botoess">
-                                        <button class="conteudo-secundario-projetos-um-conteudo-dois-botoes">Código fonte</button>
-                                        <button class="conteudo-secundario-projetos-um-conteudo-dois-botoes">Documentação</button>
+                                        <button class="conteudo-secundario-projetos-um-conteudo-dois-botoes"><i class="fa-solid fa-code"></i>Código fonte</button>
+                                        <button class="conteudo-secundario-projetos-um-conteudo-dois-botoes"><i class="fa-solid fa-file"></i>Documentação</button>
                                     </div>
                                 </div>
                             </div>                        
                     </div>
+                    <div class="swiper-slide conteudo-secundario-projetos-um">
+                        <img class="conteudo-secundario-projetos-um-imagem" src="imagens/imagem-teste1.png">
+                        <div class="conteudo-secundario-projetos-um-conteudo">
+                            <div class="conteudo-secundario-projetos-um-conteudo-um">
+                                <h4 class="conteudo-secundario-projetos-um-conteudo-um-titulo">Descrição</h4>
+                                <p class="conteudo-secundario-projetos-um-conteudo-um-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <p></p>
+                            </div>
+                            <div class="conteudo-secundario-projetos-um-conteudo-dois">
+                                <h4 class="conteudo-secundario-projetos-um-conteudo-dois-titulo">Links</h4>
+                                <div class="conteudo-secundario-projetos-um-conteudo-dois-botoess">
+                                    <button class="conteudo-secundario-projetos-um-conteudo-dois-botoes"><i class="fa-solid fa-code"></i>Código fonte</button>
+                                    <button class="conteudo-secundario-projetos-um-conteudo-dois-botoes"><i class="fa-solid fa-file"></i>Documentação</button>
+                                </div>
+                            </div>
+                        </div>                        
+                </div>
                     <div class="swiper-slide conteudo-secundario-projetos-dois">
                             <img class="conteudo-secundario-projetos-dois-imagem" src="imagens/imagem-teste1.png">
                             <div class="conteudo-secundario-projetos-dois-conteudo">
@@ -105,6 +122,7 @@
         <!-- Initialize Swiper -->
         <script>
           var swiper = new Swiper(".mySwiper", {
+            speed: 1000,
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,

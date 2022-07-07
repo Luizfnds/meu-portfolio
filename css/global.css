@@ -1,0 +1,29 @@
+:root {
+    --cor-preta: rgba(0, 0, 0);
+    --cor-preta-menos-transaparente: rgba(0, 0, 0, 0.6);
+    --cor-preta-mais-transaparente: rgba(0, 0, 0, 0.2);
+    --cor-branca: rgba(255, 255, 255);
+    --cor-branca-menos-transaparente: rgba(255, 255, 255, 0.7);
+    --cor-cinza-menos-transparente: rgba(200, 200, 200, 0.7);
+    --cor-azul: rgba(40, 100, 180);
+    --cor-azul-menos-transparente: rgba(40, 100, 180, 0.4);
+}
+
+/*---------------------------------------- Scrollbar ----------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 0.5px solid var(--cor-preta);
+    background: var(--cor-branca-menos-transaparente);
+}
+
+::-webkit-scrollbar-corner {
+    border-radius: 10px;
+}
+
+

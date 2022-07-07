@@ -275,8 +275,6 @@ body {
     justify-content: center;
     row-gap: 10px;
     z-index: 0;
-    background-color: var(--cor-preta-mais-transaparente);
-
 }
 
 .conteudo-secundario-titulo {
@@ -477,29 +475,30 @@ body {
 .conteudo-terciario-parte-um {
     width: 70%;
     height: 100%;
-    background-color: var(--cor-preta-menos-transaparente);
+    background-color: var(--cor-branca-menos-transaparente);
     backdrop-filter: blur(6px);
-    border-radius: 10px;
 }
 
 .conteudo-terciario-parte-dois {
     width: 30%;
     height: 100%;
-    background-color: var(--cor-preta-menos-transaparente);
+    background-color: var(--cor-branca-menos-transaparente);
     backdrop-filter: blur(6px);
-    border-radius: 10px;
 }
 
 .conteudo-terciario-parte-um-principal-tecnologias-titulo {
     width: 100%;
-    height: 15%;
+    height: 50px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     color: var(--cor-branca);
     border-bottom: 1px solid var(--cor-azul);
-    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-preta-menos-transaparente);
 }
 
 .conteudo-terciario-parte-um-principal-tecnologias-sla {
@@ -512,7 +511,7 @@ body {
 .fa-js,
 .fa-java,
 .fa-database {
-    font-size: 35px;
+    font-size: 33px;
     color: var(--cor-branca);
 }
 
@@ -538,6 +537,8 @@ body {
 }
 
 .conteudo-terciario-parte-um-principal-tecnologias-sla {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -548,7 +549,10 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 35px;
+    justify-content: center;
+    background-color: var(--cor-preta-mais-transaparente);
+    
 }
 
 .conteudo-terciario-parte-um-principal-tecnologias-parte-um-nivel {
@@ -556,12 +560,17 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 19px;
+    row-gap: 57px;
+    justify-content: center;
+    background-color: var(--cor-preta-mais-transaparente);
+
 }
 
 .conteudo-terciario-parte-um-principal-tecnologias-parte-um-nivel-circulos {
-    padding: 11px;
     margin-right: 6px;
+    padding-left: 0;
+    display: flex;
+    column-gap: 6px;
 }
 
 
@@ -569,8 +578,8 @@ body {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    color: var(--cor-branca);
+    font-size: 14px;
+    color: var(--cor-preta);
     display: flex;
     column-gap: 10px;
     padding-left: 20px;
@@ -578,11 +587,11 @@ body {
 }
 
 .fa-circle {
-    font-size: 15px;
-    color: var(--cor-azul);
-}
+    font-size: 12px;
 
-.conteudo-terciario-parte-um-principal-tecnologias-parte-um-nivel {}
+    color: var(--cor-preta);
+    border-radius: 50%;
+}
 
 .conteudo-terciario-parte-um-principal {
     width: 100%;
@@ -592,33 +601,94 @@ body {
 }
 
 .conteudo-terciario-parte-um-principal-tecnologias {
-    width: 240px;
+    width: 270px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
     border-right: 1px solid var(--cor-azul);
-    background-color: var(--cor-preta-menos-transaparente);
 }
 
 .conteudo-terciario-parte-um-principal-conhecimentos{
-    width: 60%;
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-content: center;
-    column-gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.lista-conhecimentos{
+    list-style-position: inside;
+    text-align: start;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.lista-conhecimentos-horizontal{
+    list-style-position: inside;
+    text-align: start;
+    padding-left: 30px;
+    display: flex;
+    column-gap: 30px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+}
 
 .conteudo-terciario-parte-um-principal-conhecimentos-frontend{
-    width: 50%;
-    height: 100%;
+    width: 29%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
 }
 
 .conteudo-terciario-parte-um-principal-conhecimentos-backend{
-    width: 50%;
-    height: 100%;
+    width: 29%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+}
+
+.conteudo-terciario-parte-um-principal-conhecimentos-uxui{
+    width: 29%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+}
+
+.conteudo-terciario-parte-um-principal-conhecimentos-outros{
+    width: 85%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.titulo-h4{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--cor-preta);
+    text-align: start;
+}
+
+.texto-ssize{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    color: var(--cor-preta)
 }
 
 /*---------------------------------------- Conteudo terciario parte 2 ----------------------------------------*/
@@ -644,17 +714,17 @@ body {
 .conteudo-terciario-parte-dois-formacoes-titulo,
 .conteudo-terciario-parte-dois-certificacoes-titulo {
     width: 100%;
-    height: 40px;
+    height: 45px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--cor-branca);
+    display: flex;
     text-align: center;
     align-items: center;
-    column-gap: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    justify-content: center;
+    column-gap: 5px;
     border-bottom: 1px solid var(--cor-azul);
     background-color: var(--cor-preta-menos-transaparente);
 }
@@ -662,7 +732,7 @@ body {
 .conteudo-terciario-parte-dois-formacoes-conteudo {
     width: 310px;
     height: 90px;
-    background-color: var(--cor-branca-menos-transaparente);
+    background-color: var(--cor-preta-mais-transaparente);
     margin-top: 15px;
     flex-shrink: 0;
     font-family: 'Poppins';
@@ -675,12 +745,12 @@ body {
 }
 
 .fa-award {
-    font-size: 20px;
+    font-size: 18px;
     padding-right: 10px;
 }
 
 .fa-graduation-cap {
-    font-size: 20px;
+    font-size: 18px;
     padding-right: 10px;
 }
 

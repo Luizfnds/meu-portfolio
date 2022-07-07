@@ -1,5 +1,5 @@
 var swiper = new Swiper(".mySwiper", {
-    speed: 1000,
+    speed: 500,
     slidesPerView: 1,
     spaceBetween: 100,
     loop: true,
